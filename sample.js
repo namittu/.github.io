@@ -9,7 +9,7 @@ async function fetchData(url, options) {
     
     const str = JSON.stringify(data);
     const parsed = JSON.parse(str);
-    console.log(parsed);
+    console.log(parsed.value);
   } catch (error) {
     console.error("Error:", error);
   }
