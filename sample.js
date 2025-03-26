@@ -1,4 +1,6 @@
 alert("Hello World!")
+getExcel()
+postExcel()
 
 async function fetchData(url, options) {
   try {
@@ -7,30 +9,35 @@ async function fetchData(url, options) {
   } catch (error) {
     console.error("Error:", error);
   }
+
+  alert(data)
 }
 
-const url =
-  "https://script.google.com/macros/s/AKfycbzAOQ9qlmSQJi9xgq_amop1ehsMuAxp83T0pltAnV0Mbdd0D2Iwwn6Fjm2bFT_Yh0gB/exec?sheetName=sheet&cell=A1";
-const options = {
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-  },
-};
-fetchData(url, options);
+function getExcel() {
+  const url =
+    "https://script.google.com/macros/s/AKfycbzAOQ9qlmSQJi9xgq_amop1ehsMuAxp83T0pltAnV0Mbdd0D2Iwwn6Fjm2bFT_Yh0gB/exec?sheetName=sheet&cell=A1";
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  fetchData(url, options);
+}
 
-
-// GASのurl
-const url = "https://script.google.com/macros/s/AKfycbzAOQ9qlmSQJi9xgq_amop1ehsMuAxp83T0pltAnV0Mbdd0D2Iwwn6Fjm2bFT_Yh0gB/exec";
-const options = {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    sheet: "sheet",
-    cell: "C1",
-    value: "XXX",
-  }),
-};
-fetchData(url, options);
+function postExcel() {
+  // GASのurl
+  const url = "https://script.google.com/macros/s/AKfycbzAOQ9qlmSQJi9xgq_amop1ehsMuAxp83T0pltAnV0Mbdd0D2Iwwn6Fjm2bFT_Yh0gB/exec";
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      sheet: "sheet",
+      cell: "C1",
+      value: "XXX",
+    }),
+  };
+  fetchData(url, options);
+}
