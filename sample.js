@@ -7,7 +7,8 @@ async function fetchData(url, options) {
     const response = await fetch(url, options);
     const data = await response.json();
     
-    const parsed = JSON.parse(data);
+    const str = JSON.stringify(data);
+    const parsed = JSON.parse(str);
     console.log(parsed);
   } catch (error) {
     console.error("Error:", error);
