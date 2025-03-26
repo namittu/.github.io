@@ -21,5 +21,3 @@ class TableMaker{
     return `<thead><tr>${thsStr}</tr></thead><tbody>${rowsStr}</tbody>`;
   }
 }
-
-
