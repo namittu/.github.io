@@ -1,6 +1,6 @@
 alert("Hello World!")
-getExcel()
-postExcel()
+call getExcel()
+call postExcel()
 
 async function fetchData(url, options) {
   try {
