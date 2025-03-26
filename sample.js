@@ -9,7 +9,9 @@ async function fetchData(url, options) {
   } catch (error) {
     console.error("Error:", error);
   }
-  alert(data.value)
+
+  const parsed = JSON.parse(data);
+  console.log(parsed);
 }
 
 function getExcel() {
