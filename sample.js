@@ -9,7 +9,6 @@ async function fetchData(url, options) {
   } catch (error) {
     console.error("Error:", error);
   }
-
   alert(data.value)
 }
 
