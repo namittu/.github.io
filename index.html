@@ -3,8 +3,21 @@
  <head>
   <meta charset="UTF-8">
   <title>はじめてのHTML</title>
+  <style>
+  table, td, th {
+   border-collapse: collapse;
+   border:1px solid #333;
+  }
+  td{
+   padding: 5px;
+  }
+  td.THUMBNAIL img{
+   width: 100px;
+  }
+  </style>
  </head>
- <body>  
+ <body> 
+   <table id="resultTable"></table>
    <script src="sample.js"></script>
    <script src="tableMaker.js"></script>
    <script src="tableResult.js"></script>
