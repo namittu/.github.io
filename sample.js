@@ -10,7 +10,7 @@ async function fetchData(url, options) {
 }
 
 const url =
-  "https://script.google.com/macros/s/GASのデプロイID/exec?sheetName=シート名&cell=セル名";
+  "https://script.google.com/macros/s/AKfycbzAOQ9qlmSQJi9xgq_amop1ehsMuAxp83T0pltAnV0Mbdd0D2Iwwn6Fjm2bFT_Yh0gB/exec?sheetName=sheet&cell=A1";
 const options = {
   method: "GET",
   headers: {
@@ -21,16 +21,16 @@ fetchData(url, options);
 
 
 // GASのurl
-const url = "https://script.google.com/macros/s/GASのデプロイID/exec";
+const url = "https://script.google.com/macros/s/AKfycbzAOQ9qlmSQJi9xgq_amop1ehsMuAxp83T0pltAnV0Mbdd0D2Iwwn6Fjm2bFT_Yh0gB/exec";
 const options = {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    sheet: "シート名",
-    cell: "セル名",
-    value: "値",
+    sheet: "sheet",
+    cell: "C1",
+    value: "XXX",
   }),
 };
 fetchData(url, options);
