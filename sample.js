@@ -6,12 +6,12 @@ async function fetchData(url, options) {
   try {
     const response = await fetch(url, options);
     const data = await response.json();
+    
+    const parsed = JSON.parse(data);
+    console.log(parsed);
   } catch (error) {
     console.error("Error:", error);
   }
-
-  const parsed = JSON.parse(data);
-  console.log(parsed);
 }
 
 function getExcel() {
