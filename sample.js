@@ -19,7 +19,7 @@ function getExcel() {
   const options = {
     method: "GET",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "text/plain",  //"application/json",
     },
   };
   fetchData(url, options);
