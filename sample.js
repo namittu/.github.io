@@ -19,7 +19,7 @@ function getExcel() {
   const options = {
     method: "GET",
     headers: {
-      "Content-Type": "text/plain",  //"application/json",
+      "Content-Type": "text/plain",  // "application/json",
     },
   };
   fetchData(url, options);
@@ -31,7 +31,7 @@ function postExcel() {
   const options = {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "text/plain",  // "application/json",
     },
     body: JSON.stringify({
       sheet: "sheet",
