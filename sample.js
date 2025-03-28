@@ -6,21 +6,22 @@ async function fetchData(url, options) {
     const str = JSON.stringify(data);
     const parsed = JSON.parse(str);
     console.log(parsed.value);
+    return parsed.value
   } catch (error) {
     console.error("Error:", error);
   }
 }
 
-function getExcel() {
+function getExcel(sheet, cell) {
   const url =
-    "https://script.google.com/macros/s/AKfycbzAOQ9qlmSQJi9xgq_amop1ehsMuAxp83T0pltAnV0Mbdd0D2Iwwn6Fjm2bFT_Yh0gB/exec?sheetName=sheet&cell=A1";
+    "https://script.google.com/macros/s/AKfycbzAOQ9qlmSQJi9xgq_amop1ehsMuAxp83T0pltAnV0Mbdd0D2Iwwn6Fjm2bFT_Yh0gB/exec?sheetName=" + sheet + "&cell=" + cell";
   const options = {
     method: "GET",
     headers: {
       "Content-Type": "text/plain",  // "application/json",
     },
   };
-  fetchData(url, options);
+  return fetchData(url, options);
 }
 
 function postExcel() {
