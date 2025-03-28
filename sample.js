@@ -1,7 +1,3 @@
-alert("Hello World!")
-getExcel();
-postExcel();
-
 async function fetchData(url, options) {
   try {
     const response = await fetch(url, options);
